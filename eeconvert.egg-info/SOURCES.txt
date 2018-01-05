@@ -1,0 +1,7 @@
+setup.py
+eeconvert/__init__.py
+eeconvert.egg-info/PKG-INFO
+eeconvert.egg-info/SOURCES.txt
+eeconvert.egg-info/dependency_links.txt
+eeconvert.egg-info/not-zip-safe
+eeconvert.egg-info/top_level.txt
