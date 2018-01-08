@@ -63,7 +63,7 @@ def fcToGdf(fc,crs = {'init' :'epsg:4326'}):
         attr['geometry']
         dictarr.append(attr)
 
-    gdf = gpd.GeoDataFrame(dictarr)
+    gdf = geopandas.GeoDataFrame(dictarr)
     gdf['geometry'] = map(lambda s: shapely.geometry.shape(s), gdf.geometry)
     gdf.crs = crs
     return gdf
