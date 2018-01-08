@@ -3,15 +3,16 @@ import botocore
 import sqlalchemy
 import ee
 
-def rdsConnect(database_identifier,database_name):
+def rdsConnect(database_identifier,database_name,master_username):
     """open a connection to AWS RDS
     
     in addition to specifying the arguments you need to store your password in a file called .password in the current working directory. 
     You can do this using the command line or Jupyter. Make sure to have your .gitignore file up to date.
     
     Args:
-        database_identifier (string) : database identifier used when you set up the AWS RDS instance
+        database_identifier (string) : postgresql database identifier used when you set up the AWS RDS instance
         database_name (string) : the database name to connect to
+        master_username (string) : the master user name for the database
         
     Returns:
         engine (sqlalchemy.engine.base.Engine) : database engine
@@ -28,6 +29,10 @@ def rdsConnect(database_identifier,database_name):
     print("Status:",status)
     endpoint = response["DBInstances"][0]["Endpoint"]["Address"]
     print("Endpoint:",endpoint)
-    engine = sqlalchemy.create_engine('postgresql://rutgerhofste:%s@%s:5432/%s' %(password,endpoint,database_name))
+    engine = sqlalchemy.create_engine('postgresql://%s:%s@%s:5432/%s' %(master_username,password,endpoint,database_name))
     connection = engine.connect()
     return engine, connection
+
+
+
+
