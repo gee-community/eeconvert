@@ -8,5 +8,5 @@ setup(name='eeconvert',
       author_email='rutgerhofste@gmail.com',
       license='MIT',
       packages=['eeconvert'],
-      install_requires=[boto3,botocore],
+      install_requires=[boto3,botocore,sqlalchemy,sqlalchemy2],
       zip_safe=False)
