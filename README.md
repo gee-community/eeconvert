@@ -10,7 +10,7 @@ allow to install using `conda install eeconvert`
 Caveat:
 - some functions depend on pyproj which on python 3.5 cannot be installed by pip alone (non pure pythonic package). Use conda to install geopandas.  
 
-
+Try to rebuild with travis
 
 
 
