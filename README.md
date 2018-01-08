@@ -7,10 +7,8 @@ Installation:
 Todo: 
 allow to install using `conda install eeconvert` 
 
-Caveat:
-- some functions depend on pyproj which on python 3.5 cannot be installed by pip alone (non pure pythonic package). Use conda to install geopandas separately.
-
-Try to rebuild with travis
+Caveat with pip install:
+- The functions with geopandas require pyproj which is a non pure pythonic package and needs to be compiled. To avoid this complexity you will need to install geopandas (incl.) pyproj separately. Conda install is the preferred way to do this. 
 
 
 
