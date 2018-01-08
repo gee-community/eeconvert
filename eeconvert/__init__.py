@@ -81,7 +81,7 @@ def fcToDf(fc):
         
     """
     
-    def gdfToPostGIS(connection, gdf,tableName,saveIndex = True):
+def gdfToPostGIS(connection, gdf,tableName,saveIndex = True):
     """this function uploads a geodataframe to table in AWS RDS.
     
     It handles combined polygon/multipolygon geometry and stores it in valid multipolygon in epsg 4326.
