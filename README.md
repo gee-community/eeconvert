@@ -1,5 +1,5 @@
 # eeconvert
-earth engine conversion for jupyter notebook use
+work in progress. Do not use yet. 
 
 test  
 
