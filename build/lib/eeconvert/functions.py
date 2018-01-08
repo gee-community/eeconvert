@@ -1,7 +1,6 @@
 import boto3
 import botocore
 import sqlalchemy
-import ee
 
 def rdsConnect(database_identifier,database_name):
     """open a connection to AWS RDS
