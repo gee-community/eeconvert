@@ -8,7 +8,5 @@ setup(name='eeconvert',
       author_email='rutgerhofste@gmail.com',
       license='MIT',
       packages=['eeconvert'],
-      install_requires=[
-          'folium','geopandas'
-      ],
+      install_requires=[],
       zip_safe=False)
