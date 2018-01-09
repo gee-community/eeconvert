@@ -18,13 +18,13 @@ def rdsConnect(database_identifier,database_name,master_username):
     You can do this using the command line or Jupyter. Make sure to have your .gitignore file up to date.
     
     Args:
-        database_identifier (string) : postgresql database identifier used when you set up the AWS RDS instance
-        database_name (string) : the database name to connect to
-        master_username (string) : the master username for the database
+        database_identifier (string) : postgresql database identifier used when you set up the AWS RDS instance.  
+        database_name (string) : the database name to connect to.  
+        master_username (string) : the master username for the database.  
         
     Returns:
-        engine (sqlalchemy.engine.base.Engine) : database engine
-        connection (sqlalchemy.engine.base.Connection) : database connection
+        engine (sqlalchemy.engine.base.Engine) : database engine.  
+        connection (sqlalchemy.engine.base.Connection) : database connection.  
     """
     
     
