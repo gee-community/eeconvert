@@ -2,6 +2,7 @@ import boto3
 import botocore
 import sqlalchemy
 import ee
+import geopandas
 
 def rdsConnect(database_identifier,database_name,master_username):
     """open a connection to AWS RDS
