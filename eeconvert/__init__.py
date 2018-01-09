@@ -2,7 +2,13 @@ import boto3
 import botocore
 import sqlalchemy
 import ee
-import geopandas
+import pandas as pd
+import geopandas as gpd 
+import shapely
+import shapely.wkt
+import branca
+import folium
+
 
 def rdsConnect(database_identifier,database_name,master_username):
     """open a connection to AWS RDS
