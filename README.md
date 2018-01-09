@@ -8,24 +8,24 @@ Documentation is currently limited to the comments of the different functions in
 
 
 
-Installation:  
+## Installation:  
 
-Step 1:  
+### Step 1:  
 
 One of the packages' dependencies is pyproj which requires a compiler to be installed. 
 
-Linux 
+#### Linux 
 
 `apt-get install gcc`
 
-MacOS
+#### MacOS
 
-Windows
+#### Windows
 
 Install MicroSoft Visual
 
 
-Step 2:  
+### Step 2:  
 
 `pip install eeconvert`
 
