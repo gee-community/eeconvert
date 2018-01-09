@@ -30,11 +30,11 @@ Install MicroSoft Visual
 `pip install eeconvert`
 
 
-Todo: 
-allow to install using `conda install eeconvert` 
-
-Caveat with pip install:
-- The functions with geopandas require pyproj which is a non pure pythonic package and needs to be compiled. To avoid this complexity you will have to install geopandas (incl. pyproj) separately. 
+## Todo: 
+1. allow to install using `conda install eeconvert` 
+1. Develop testing scripts
+1. create a read the docs
+1. improve functionality
 
 
 [![Build Status](https://travis-ci.org/rutgerhofste/eeconvert.svg?branch=master)](https://travis-ci.org/rutgerhofste/eeconvert)
