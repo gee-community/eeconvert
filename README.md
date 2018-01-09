@@ -1,8 +1,16 @@
 # eeconvert
 
-the objective of eeconvert is to have easy to use functions to convert google earth engine data types such as featureCollections into other GIS formats such as geopandas GeoDataframes or Folium map layers. These functions are client side so mostly useful for testing of specific areas or geometries. 
+the objective of eeconvert is to have easy to use functions to convert google earth engine data types such as featureCollections into other GIS formats such as geopandas GeoDataframes or Folium map layers. These functions are client side so mostly useful for testing of specific areas or geometries.
 
-This repo is mainly for personal use so use at your own risk.  
+Supported formats:
+
+1. pandas
+1. geopandas
+1. folium 
+1. postGreSQL
+1. postGIS (enabled postGreSQL)
+
+use at your own risk.  
 
 Documentation is currently limited to the comments of the different functions in the eeconvert/eeconvert/__init__.py file. 
 
