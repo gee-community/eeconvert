@@ -7,3 +7,4 @@ folium
 geojson
 branca
 pandas
+geopandas
