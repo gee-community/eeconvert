@@ -20,6 +20,10 @@ One of the packages' dependencies is pyproj which requires a compiler to be inst
 
 #### MacOS
 
+Using brew:  
+`brew install llvm`
+
+
 #### Windows
 
 Install MicroSoft Visual
