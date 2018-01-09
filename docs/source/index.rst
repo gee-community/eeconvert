@@ -10,6 +10,7 @@ Welcome to eeconvert's documentation!
    :maxdepth: 2
    :caption: Contents:
 
+   installation
    eeconvert
    LICENSE
 

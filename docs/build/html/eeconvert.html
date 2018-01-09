@@ -37,7 +37,7 @@
         <link rel="search" title="Search" href="search.html"/>
     <link rel="top" title="eeconvert 0.0.1 documentation" href="index.html"/>
         <link rel="next" title="LICENCE" href="LICENSE.html"/>
-        <link rel="prev" title="Welcome to eeconvert’s documentation!" href="index.html"/> 
+        <link rel="prev" title="Installation" href="installation.html"/> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -92,8 +92,9 @@
             
               <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">eeconvert package</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#module-eeconvert">Module contents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-eeconvert">Functions</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="LICENSE.html">LICENCE</a></li>
@@ -163,7 +164,7 @@
   <div class="section" id="eeconvert-package">
 <h1>eeconvert package<a class="headerlink" href="#eeconvert-package" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="module-eeconvert">
-<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-eeconvert" title="Permalink to this headline">¶</a></h2>
+<span id="functions"></span><h2>Functions<a class="headerlink" href="#module-eeconvert" title="Permalink to this headline">¶</a></h2>
 <dl class="function">
 <dt id="eeconvert.defaultMap">
 <code class="descclassname">eeconvert.</code><code class="descname">defaultMap</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#eeconvert.defaultMap" title="Permalink to this definition">¶</a></dt>
@@ -200,9 +201,9 @@ saveIndex (boolean, optional) : save geoDataFrame index column in separate colum
 
 <dl class="function">
 <dt id="eeconvert.eeImageToFoliumLayer">
-<code class="descclassname">eeconvert.</code><code class="descname">eeImageToFoliumLayer</code><span class="sig-paren">(</span><em>image</em>, <em>layerName='eeLayer'</em>, <em>vis_params=None</em>, <em>folium_kwargs={}</em><span class="sig-paren">)</span><a class="headerlink" href="#eeconvert.eeImageToFoliumLayer" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">eeconvert.</code><code class="descname">eeImageToFoliumLayer</code><span class="sig-paren">(</span><em>image</em>, <em>layerName='eeLayer'</em>, <em>visParams=None</em>, <em>foliumKwargs={}</em><span class="sig-paren">)</span><a class="headerlink" href="#eeconvert.eeImageToFoliumLayer" title="Permalink to this definition">¶</a></dt>
 <dd><p>Function to add Google Earch Engine tile layer as a Folium layer.
-based on <a class="reference external" href="https://github.com/mccarthyryanc/folium_gee/blob/master/folium_gee.py">https://github.com/mccarthyryanc/folium_gee/blob/master/folium_gee.py</a></p>
+based on <a class="reference external" href="https://github.com/mccarthyryanc/folium_gee/blob/master/folium_gee.py">https://github.com/mccarthyryanc/folium_gee/blob/master/folium_gee.py</a> hence PEP8 instead of camelcase</p>
 <dl class="docutils">
 <dt>Args:</dt>
 <dd>image (ee.Image) : Google Earth Engine Image.
@@ -257,7 +258,7 @@ crs (dictionary, optional) : the coordinate reference system in geopandas format
 
 <dl class="function">
 <dt id="eeconvert.gdfToFoliumGroup">
-<code class="descclassname">eeconvert.</code><code class="descname">gdfToFoliumGroup</code><span class="sig-paren">(</span><em>gdf</em>, <em>name='noName'</em>, <em>m=None</em><span class="sig-paren">)</span><a class="headerlink" href="#eeconvert.gdfToFoliumGroup" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">eeconvert.</code><code class="descname">gdfToFoliumGroup</code><span class="sig-paren">(</span><em>gdf</em>, <em>name='noName'</em><span class="sig-paren">)</span><a class="headerlink" href="#eeconvert.gdfToFoliumGroup" title="Permalink to this definition">¶</a></dt>
 <dd><p>converts a geodataframe  to a folium featureGroup with the properties as a popup child</p>
 <dl class="docutils">
 <dt>Args:</dt>
@@ -371,7 +372,7 @@ connection (sqlalchemy.engine.base.Connection) : database connection</dd>
         <a href="LICENSE.html" class="btn btn-neutral float-right" title="LICENCE" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="index.html" class="btn btn-neutral" title="Welcome to eeconvert’s documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="installation.html" class="btn btn-neutral" title="Installation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
