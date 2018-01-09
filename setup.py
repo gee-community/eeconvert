@@ -1,7 +1,7 @@
 from setuptools import setup
 
 setup(name='eeconvert',
-      version='0.1.17',
+      version='0.1.18',
       description='',
       url='http://github.com/rutgerhofste/eeconvert',
       author='Rutger Hofste',
