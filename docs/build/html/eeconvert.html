@@ -1,0 +1,433 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>eeconvert package &mdash; eeconvert 0.0.1 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="eeconvert 0.0.1 documentation" href="index.html"/>
+        <link rel="next" title="LICENCE" href="LICENSE.html"/>
+        <link rel="prev" title="Welcome to eeconvert’s documentation!" href="index.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> eeconvert
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.0.1
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">eeconvert package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#module-eeconvert">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="LICENSE.html">LICENCE</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">eeconvert</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+      <li>eeconvert package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/eeconvert.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="eeconvert-package">
+<h1>eeconvert package<a class="headerlink" href="#eeconvert-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="module-eeconvert">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-eeconvert" title="Permalink to this headline">¶</a></h2>
+<dl class="function">
+<dt id="eeconvert.defaultMap">
+<code class="descclassname">eeconvert.</code><code class="descname">defaultMap</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#eeconvert.defaultMap" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="eeconvert.dfToFc">
+<code class="descclassname">eeconvert.</code><code class="descname">dfToFc</code><span class="sig-paren">(</span><em>df</em><span class="sig-paren">)</span><a class="headerlink" href="#eeconvert.dfToFc" title="Permalink to this definition">¶</a></dt>
+<dd><p>converts a dataframe  to a featurecollection without geometry</p>
+<dl class="docutils">
+<dt>Args:</dt>
+<dd>df (pandas.dataFrame) : the input dataframe</dd>
+<dt>Returns:</dt>
+<dd>fc (ee.FeatureCollection) : feature collection with empty geometry</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="eeconvert.dfToPostgreSQL">
+<code class="descclassname">eeconvert.</code><code class="descname">dfToPostgreSQL</code><span class="sig-paren">(</span><em>connection</em>, <em>df</em>, <em>tableName</em>, <em>saveIndex=True</em><span class="sig-paren">)</span><a class="headerlink" href="#eeconvert.dfToPostgreSQL" title="Permalink to this definition">¶</a></dt>
+<dd><p>this function uploads a dataframe to table in AWS RDS.</p>
+<dl class="docutils">
+<dt>Args:</dt>
+<dd>connection (sqlalchemy.engine.base.Connection) :database connection 
+df (pandas.GeoDataFrame) : input dataFrame
+tableName (string) : table name (string)
+saveIndex (boolean, optional) : save geoDataFrame index column in separate column in postgresql, otherwise discarded. Default is True</dd>
+<dt>Returns:</dt>
+<dd>gdf (geoPandas.GeoDataFrame) : the geodataframe loaded from the database. Should match the input dataframe</dd>
+<dt>todo:</dt>
+<dd>currently removes table if exists. Include option to break or append</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="eeconvert.eeImageToFoliumLayer">
+<code class="descclassname">eeconvert.</code><code class="descname">eeImageToFoliumLayer</code><span class="sig-paren">(</span><em>image</em>, <em>layerName='eeLayer'</em>, <em>vis_params=None</em>, <em>folium_kwargs={}</em><span class="sig-paren">)</span><a class="headerlink" href="#eeconvert.eeImageToFoliumLayer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Function to add Google Earch Engine tile layer as a Folium layer.
+based on <a class="reference external" href="https://github.com/mccarthyryanc/folium_gee/blob/master/folium_gee.py">https://github.com/mccarthyryanc/folium_gee/blob/master/folium_gee.py</a></p>
+<dl class="docutils">
+<dt>Args:</dt>
+<dd>image (ee.Image) : Google Earth Engine Image.
+layerName (string) : Layer name for in folium layerControl. Default : “eeLayer”
+vis_params (dict) : Dict with visualization parameters as used in Google Earth Engine. Note that color palatte inputs in python needs to be structured like: “palette”: “ff0000,ff0000,0013ff”
+folium_kwargs (dict) : Keyword args for Folium Map.</dd>
+<dt>Returns:</dt>
+<dd>layer () : folium Layer. Add to map by applying method .add(m)</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="eeconvert.fcToDf">
+<code class="descclassname">eeconvert.</code><code class="descname">fcToDf</code><span class="sig-paren">(</span><em>fc</em><span class="sig-paren">)</span><a class="headerlink" href="#eeconvert.fcToDf" title="Permalink to this definition">¶</a></dt>
+<dd><p>converts a featurecollection to a Pandas DataFrame. Use this function for featureCollections without geometries. For featureCollections with geometries, use fcToGdf()</p>
+<dl class="docutils">
+<dt>Args:</dt>
+<dd>fc (ee.FeatureCollection) : the earth engine feature collection to convert. Size is limited to memory (geopandas limitation)
+crs (dictionary, optional) : the coordinate reference system in geopandas format. Defaults to {‘init’ :’epsg:4326’}</dd>
+<dt>Returns:</dt>
+<dd>df (pandas.DataFrame) : the corresponding dataframe.</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="eeconvert.fcToGdf">
+<code class="descclassname">eeconvert.</code><code class="descname">fcToGdf</code><span class="sig-paren">(</span><em>fc</em>, <em>crs={'init': 'epsg:4326'}</em><span class="sig-paren">)</span><a class="headerlink" href="#eeconvert.fcToGdf" title="Permalink to this definition">¶</a></dt>
+<dd><p>converts a featurecollection to a geoPandas GeoDataFrame. Use this function only if all features have a geometry.</p>
+<p>caveats:
+Currently only supports non-geodesic (planar) geometries because of limitations in geoPandas and Leaflet. Geodesic geometries are simply interpreted as planar geometries. 
+FeatureCollections larger than memory are currently not supported. Consider splitting data and merging (server side) afterwards.</p>
+<dl class="docutils">
+<dt>Args:</dt>
+<dd>fc (ee.FeatureCollection) : the earth engine feature collection to convert. 
+crs (dictionary, optional) : the coordinate reference system in geopandas format. Defaults to {‘init’ :’epsg:4326’}</dd>
+<dt>Returns:</dt>
+<dd>gdf (geoPandas.GeoDataFrame or pandas.DataFrame) : the corresponding (geo)dataframe.</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="eeconvert.gdfToFc">
+<code class="descclassname">eeconvert.</code><code class="descname">gdfToFc</code><span class="sig-paren">(</span><em>gdf</em><span class="sig-paren">)</span><a class="headerlink" href="#eeconvert.gdfToFc" title="Permalink to this definition">¶</a></dt>
+<dd><p>converts a geodataframe  to a featurecollection</p>
+<dl class="docutils">
+<dt>Args:</dt>
+<dd>gdf (geoPandas.GeoDataFrame) : the input geodataframe</dd>
+<dt>Returns:</dt>
+<dd>fc (ee.FeatureCollection) : feature collection (server side)</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="eeconvert.gdfToFoliumGroup">
+<code class="descclassname">eeconvert.</code><code class="descname">gdfToFoliumGroup</code><span class="sig-paren">(</span><em>gdf</em>, <em>name='noName'</em>, <em>m=None</em><span class="sig-paren">)</span><a class="headerlink" href="#eeconvert.gdfToFoliumGroup" title="Permalink to this definition">¶</a></dt>
+<dd><p>converts a geodataframe  to a folium featureGroup with the properties as a popup child</p>
+<dl class="docutils">
+<dt>Args:</dt>
+<dd>gdf (geoPandas.GeoDataFrame) : the input geodataframe
+name (string) : output folium feature group name</dd>
+<dt>Returns:</dt>
+<dd>fc (ee.FeatureCollection) : feature collection (server side)</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="eeconvert.gdfToPostGIS">
+<code class="descclassname">eeconvert.</code><code class="descname">gdfToPostGIS</code><span class="sig-paren">(</span><em>connection</em>, <em>gdf</em>, <em>tableName</em>, <em>saveIndex=True</em><span class="sig-paren">)</span><a class="headerlink" href="#eeconvert.gdfToPostGIS" title="Permalink to this definition">¶</a></dt>
+<dd><p>this function uploads a geodataframe to table in AWS RDS.</p>
+<p>It handles combined polygon/multipolygon geometry and stores it in valid multipolygon in epsg 4326.</p>
+<dl class="docutils">
+<dt>Args:</dt>
+<dd>connection (sqlalchemy.engine.base.Connection) : postGIS enabled database connection 
+gdf (geoPandas.GeoDataFrame) : input geoDataFrame
+tableName (string) : postGIS table name (string)
+saveIndex (boolean, optional) : save geoDataFrame index column in separate column in postgresql, otherwise discarded. Default is True</dd>
+<dt>Returns:</dt>
+<dd>gdf (geoPandas.GeoDataFrame) : the geodataframe loaded from the database. Should match the input dataframe</dd>
+<dt>todo:</dt>
+<dd>currently removes table if exists. Include option to break or append</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="eeconvert.noGeometryEEFeature">
+<code class="descclassname">eeconvert.</code><code class="descname">noGeometryEEFeature</code><span class="sig-paren">(</span><em>row</em><span class="sig-paren">)</span><a class="headerlink" href="#eeconvert.noGeometryEEFeature" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="eeconvert.postGisToGdf">
+<code class="descclassname">eeconvert.</code><code class="descname">postGisToGdf</code><span class="sig-paren">(</span><em>connection</em>, <em>tableName</em><span class="sig-paren">)</span><a class="headerlink" href="#eeconvert.postGisToGdf" title="Permalink to this definition">¶</a></dt>
+<dd><p>this function gets a geoDataFrame from a postGIS database instance</p>
+<dl class="docutils">
+<dt>Args:</dt>
+<dd>connection (sqlalchemy.engine.base.Connection) : postGIS enabled database connection 
+tableName (string) : table name</dd>
+<dt>Returns:</dt>
+<dd>gdf (geoPandas.GeoDataFrame) : the geodataframe from PostGIS</dd>
+<dt>todo:</dt>
+<dd>allow for SQL filtering</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="eeconvert.postgreSQLToDf">
+<code class="descclassname">eeconvert.</code><code class="descname">postgreSQLToDf</code><span class="sig-paren">(</span><em>connection</em>, <em>tableName</em><span class="sig-paren">)</span><a class="headerlink" href="#eeconvert.postgreSQLToDf" title="Permalink to this definition">¶</a></dt>
+<dd><p>this function gets a dataFrame from a postGIS database instance</p>
+<dl class="docutils">
+<dt>Args:</dt>
+<dd>connection (sqlalchemy.engine.base.Connection) : postGIS enabled database connection 
+tableName (string) : table name</dd>
+<dt>Returns:</dt>
+<dd>df (pandas.DataFrame) : the dataframe from PostGIS</dd>
+<dt>todo:</dt>
+<dd>allow for SQL filtering</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="eeconvert.rdsConnect">
+<code class="descclassname">eeconvert.</code><code class="descname">rdsConnect</code><span class="sig-paren">(</span><em>database_identifier</em>, <em>database_name</em>, <em>master_username</em><span class="sig-paren">)</span><a class="headerlink" href="#eeconvert.rdsConnect" title="Permalink to this definition">¶</a></dt>
+<dd><p>open a connection to AWS RDS</p>
+<p>in addition to specifying the arguments you need to store your password in a file called .password in the current working directory. 
+You can do this using the command line or Jupyter. Make sure to have your .gitignore file up to date.</p>
+<dl class="docutils">
+<dt>Args:</dt>
+<dd>database_identifier (string) : postgresql database identifier used when you set up the AWS RDS instance
+database_name (string) : the database name to connect to
+master_username (string) : the master username for the database</dd>
+<dt>Returns:</dt>
+<dd>engine (sqlalchemy.engine.base.Engine) : database engine
+connection (sqlalchemy.engine.base.Connection) : database connection</dd>
+</dl>
+</dd></dl>
+
+<dl class="function">
+<dt id="eeconvert.shapelyToEEFeature">
+<code class="descclassname">eeconvert.</code><code class="descname">shapelyToEEFeature</code><span class="sig-paren">(</span><em>row</em><span class="sig-paren">)</span><a class="headerlink" href="#eeconvert.shapelyToEEFeature" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="function">
+<dt id="eeconvert.shapelyToFoliumFeature">
+<code class="descclassname">eeconvert.</code><code class="descname">shapelyToFoliumFeature</code><span class="sig-paren">(</span><em>row</em><span class="sig-paren">)</span><a class="headerlink" href="#eeconvert.shapelyToFoliumFeature" title="Permalink to this definition">¶</a></dt>
+<dd><p>converts a shapely feature to a folium (leaflet) feature. row needs to have a geometry column. CRS is 4326</p>
+<dl class="docutils">
+<dt>Args:</dt>
+<dd>row (geoPandas.GeoDataFrame row) : the input geodataframe row. Appy this function to a geodataframe gdf.appy(function, 1)</dd>
+<dt>Returns:</dt>
+<dd>foliumFeature  (folium feature) : foliumFeature with popup child.</dd>
+</dl>
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="LICENSE.html" class="btn btn-neutral float-right" title="LICENCE" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="Welcome to eeconvert’s documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2018, Rutger Hofste.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.0.1',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>
