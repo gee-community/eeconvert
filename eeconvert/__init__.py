@@ -8,6 +8,7 @@ import shapely
 import shapely.wkt
 import branca
 import folium
+import geojson
 
 
 def rdsConnect(database_identifier,database_name,master_username):
@@ -71,7 +72,7 @@ def fcToGdf(fc,crs = {'init' :'epsg:4326'}):
         dictarr.append(attr)
 
     gdf = gpd.GeoDataFrame(dictarr)
-    gdf['geometry'] = map(lambda s: shapely.geometry.shape(s), gdf.geometry)
+    gdf['geometry'] = list(map(lambda s: shapely.geometry.shape(s), gdf.geometry))
     gdf.crs = crs
     return gdf
 
@@ -282,7 +283,7 @@ def defaultMap():
     return m
 
 
-def gdfToFoliumGroup(gdf,name="noName",m=None):
+def gdfToFoliumGroup(gdf,name="noName"):
     """converts a geodataframe  to a folium featureGroup with the properties as a popup child
     
     Args:
@@ -294,10 +295,7 @@ def gdfToFoliumGroup(gdf,name="noName",m=None):
     """
      
     featureGroup = folium.FeatureGroup(name=name)
-    if m:
-        pass
-    else:
-        m = defaultMap()
+
     
     features = gdf.apply(shapelyToFoliumFeature,1)   
     map(lambda x: x.add_to(featureGroup),features)
@@ -306,10 +304,10 @@ def gdfToFoliumGroup(gdf,name="noName",m=None):
 
 
 
-def eeImageToFoliumLayer(image,layerName="eeLayer",vis_params=None,folium_kwargs={}):
+def eeImageToFoliumLayer(image,layerName="eeLayer",visParams=None,foliumKwargs={}):
     """
     Function to add Google Earch Engine tile layer as a Folium layer.
-    based on https://github.com/mccarthyryanc/folium_gee/blob/master/folium_gee.py
+    based on https://github.com/mccarthyryanc/folium_gee/blob/master/folium_gee.py hence PEP8 instead of camelcase
     
     Args:
         image (ee.Image) : Google Earth Engine Image.
@@ -323,14 +321,14 @@ def eeImageToFoliumLayer(image,layerName="eeLayer",vis_params=None,folium_kwargs
     """
     
     # Get the MapID and Token after applying parameters
-    image_info = image.getMapId(vis_params)
+    image_info = image.getMapId(visParams)
     mapid = image_info['mapid']
     token = image_info['token']
-    folium_kwargs['attr'] = ('Map Data &copy; <a href="https://earthengine.google.com/">Google Earth Engine</a> ')
-    folium_kwargs['tiles'] = "https://earthengine.googleapis.com/map/%s/{z}/{x}/{y}?token=%s"%(mapid,token)
+    foliumKwargs['attr'] = ('Map Data &copy; <a href="https://earthengine.google.com/">Google Earth Engine</a> ')
+    foliumKwargs['tiles'] = "https://earthengine.googleapis.com/map/%s/{z}/{x}/{y}?token=%s"%(mapid,token)
     
-    layer = folium.TileLayer(**folium_kwargs)
-    layer.layer_name = "test"
+    layer = folium.TileLayer(**foliumKwargs)
+    layer.layer_name = layerName
     return layer
     
     features = fc.getInfo()['features']
