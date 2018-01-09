@@ -14,6 +14,7 @@ use at your own risk.
 
 Documentation is currently limited to the comments of the different functions in the eeconvert/eeconvert/__init__.py file. 
 
+[Link to read the Docs](http://eeconvert.readthedocs.io/en/latest/index.html)
 
 
 ## Installation:  
