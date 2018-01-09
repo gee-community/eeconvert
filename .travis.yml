@@ -2,7 +2,9 @@ language: python
 
 os:
   - linux
-  - osx
+
+compiler:
+  - gcc
 
 python:
   - 2.7
@@ -14,3 +16,4 @@ install:
   
 script:
   - pytest
+
