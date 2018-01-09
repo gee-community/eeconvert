@@ -1,4 +1,4 @@
-# eeconvert
+# eeConvert
 
 the objective of eeconvert is to have easy to use functions to convert google earth engine data types such as featureCollections into other GIS formats such as geopandas GeoDataframes or Folium map layers. These functions are client side so don't use them on large featureCollections or images. This package is mainly tailored to test subsets of your results and visualize them in a dataframe or folium map.
 
