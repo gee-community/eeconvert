@@ -1,1 +1,10 @@
+boto3
+botocore
+sqlalchemy
+earthengine-api
+shapely
+folium
+geojson
+branca
 pandas
+geopandas
