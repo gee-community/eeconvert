@@ -1,7 +1,7 @@
 eeconvert package
 =================
 
-Functions
+Module contents
 ---------------
 
 .. automodule:: eeconvert
